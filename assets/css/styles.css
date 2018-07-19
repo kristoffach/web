@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0b0b;
+  min-width: 100%;
+}
+
+a {
+  color: #f7a46e;
+}
+
+p {
+  color: red;
+}
+
+header {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  text-align: center;
+}
+
+#content {
+  display: inline-flex;
+  min-height: calc(100vh - 220px);
+}
+
+#content div img {
+  height: 300px;
+}

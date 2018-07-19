@@ -197,12 +197,18 @@ footer {
 
 .c_hard {
   background-color: #04db0433;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
 }
 .c_weak {
   background-color: #ff00004d;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
 }
 .c_selected {
   background-color: #0000ff4d;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
 }
 
 .c_legend {
