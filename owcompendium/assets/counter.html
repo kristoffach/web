@@ -1,0 +1,272 @@
+<div id="counter">
+  <div class="random">
+    <button class="accordion odd" style="text-align: center;">click to pic random hero</button>
+    <div class="panel reset">
+      <img id="c_ran" class="" src="assets/img/random.png"/>
+      <img id="c_ran_sup" class="" src="assets/img/random_support.png"/>
+      <img id="c_ran_tan" class="" src="assets/img/random_tank.png"/>
+      <img id="c_ran_dps" class="" src="assets/img/random_dps.png"/>
+      <!-- <img id="c_ran_ran" class="" src="assets/img/random_ranged.png"/>
+      <img id="c_ran_mel" class="" src="assets/img/random_melee.png"/> -->
+      <img id="c_ran_def" class="" src="assets/img/random_defensive.png"/>
+      <img id="c_ran_off" class="" src="assets/img/random_offensive.png"/>
+    </div>
+  </div>
+  <div class="tank">
+    <span class="span_h1">tanks</span>
+    <div class="reset">
+      <img id="c_dva" class="" src="assets/img/dva.png"/>
+      <img id="c_ori" class="" src="assets/img/orisa.png"/>
+      <img id="c_rei" class="" src="assets/img/reinhardt.png"/>
+      <img id="c_roa" class="" src="assets/img/roadhog.png"/>
+      <img id="c_win" class="" src="assets/img/winston.png"/>
+      <img id="c_zar" class="" src="assets/img/zarya.png"/>
+    </div>
+  </div>
+  <div class="dps">
+    <span class="span_h1">dps</span>
+    <div class="reset">
+      <img id="c_bas" class="" src="assets/img/bastion.png"/>
+      <img id="c_doo" class="" src="assets/img/doomfist.png"/>
+      <img id="c_gen" class="" src="assets/img/genji.png"/>
+      <img id="c_han" class="" src="assets/img/hanzo.png"/>
+      <img id="c_jun" class="" src="assets/img/junkrat.png"/>
+      <img id="c_mcr" class="" src="assets/img/mcree.png"/>
+      <img id="c_mei" class="" src="assets/img/mei.png"/>
+      <img id="c_pha" class="" src="assets/img/pharah.png"/>
+      <img id="c_rea" class="" src="assets/img/reaper.png"/>
+      <img id="c_sol" class="" src="assets/img/soldier.png"/>
+      <img id="c_som" class="" src="assets/img/sombra.png"/>
+      <img id="c_sym" class="" src="assets/img/symmetra.png"/>
+      <img id="c_tor" class="" src="assets/img/thorbjorn.png"/>
+      <img id="c_tra" class="" src="assets/img/tracer.png"/>
+      <img id="c_wid" class="" src="assets/img/widowmaker.png"/>
+    </div>
+  </div>
+  <div class="support">
+    <span class="span_h1">support</span>
+    <div class="reset">
+      <img id="c_ana" class="" src="assets/img/ana.png"/>
+      <img id="c_bri" class="" src="assets/img/brigitte.png"/>
+      <img id="c_luc" class="" src="assets/img/lucio.png"/>
+      <img id="c_mer" class="" src="assets/img/mercy.png"/>
+      <img id="c_moi" class="" src="assets/img/moira.png"/>
+      <img id="c_zen" class="" src="assets/img/zenyatta.png"/>
+    </div>
+  </div>
+  <div class="legend">
+    <span class="span_h1">legend</span>
+      <div class="c_legend c_selected" >Current hero</div>
+      <div class="c_legend c_hard" >Hard counters</div>
+      <div class="c_legend c_weak" >Weak against</div>
+  </div>
+</div>
+<script>
+
+/*----------------------- Tanks -----------------------*/
+$("#c_dva").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_dva").addClass("c_selected");
+  $("#c_wid,#c_tor,#c_han,#c_win").addClass("c_hard");
+  $("#c_zar,#c_mei,#c_jun,#c_rea,#c_mcr,#c_gen,#c_rei").addClass("c_weak");
+},);
+
+$("#c_ori").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_ori").addClass("c_selected");
+  $("#c_win,#c_rei,#c_tor,#c_luc,#c_mer,#c_zen").addClass("c_hard");
+  $("#c_bas,#c_gen,#c_tra,#c_rea,#c_som,#c_wid,#c_pha").addClass("c_weak");
+},);
+
+$("#c_rei").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_rei").addClass("c_selected");
+  $("#c_sol,#c_mer,#c_tor,#c_wid,#c_han,#c_dva,#c_gen").addClass("c_hard");
+  $("#c_mcr,#c_bas,#c_pha,#c_jun,#c_rea,#c_tra").addClass("c_weak");
+},);
+
+$("#c_roa").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_roa").addClass("c_selected");
+  $("#c_win,#c_mer,#c_bas,#c_luc,#c_pha,#c_tra,#c_gen,#c_sol").addClass("c_hard");
+  $("#c_rea,#c_mei,#c_dva,#c_zar,#c_mcr").addClass("c_weak");
+},);
+
+$("#c_win").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_win").addClass("c_selected");
+  $("#c_gen,#c_zen,#c_wid,#c_sym,#c_han,#c_tra").addClass("c_hard");
+  $("#c_bas,#c_rea,#c_roa,#c_mcr,#c_mei,#c_dva,#c_zar,#c_bri").addClass("c_weak");
+},);
+
+$("#c_zar").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_zar").addClass("c_selected");
+  $("#c_gen,#c_zen,#c_tor,#c_sym,#c_dva,#c_win").addClass("c_hard");
+  $("#c_pha,#c_rea,#c_bas,#c_mei,#c_rei").addClass("c_weak");
+},);
+
+/*----------------------- DPS -----------------------*/
+$("#c_bas").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_bas").addClass("c_selected");
+  $("#c_win,#c_mer,#c_rei,#c_luc,#c_tor,#c_ori,#c_bri").addClass("c_hard");
+  $("#c_wid,#c_gen,#c_han,#c_jun,#c_pha,#c_tra,#c_mei,#c_rea").addClass("c_weak");
+},);
+
+$("#c_doo").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_doo").addClass("c_selected");
+  $("#c_bas,#c_tor,#c_mer,#c_ana,#c_zen,#c_zar,#c_roa,#c_moi").addClass("c_hard");
+  $("#c_ori,#c_som,#c_mcr,#c_wid,#c_pha,#c_mei,#c_rea").addClass("c_weak");
+},);
+
+$("#c_gen").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_gen").addClass("c_selected");
+  $("#c_bas,#c_mer,#c_wid,#c_han,#c_zen,#c_sol").addClass("c_hard");
+  $("#c_zar,#c_mei,#c_win,#c_roa,#c_pha,#c_sym,#c_rei").addClass("c_weak");
+},);
+
+$("#c_han").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_han").addClass("c_selected");
+  $("#c_bas,#c_mer,#c_zen,#c_tor,#c_jun").addClass("c_hard");
+  $("#c_gen,#c_win,#c_wid,#c_tra,#c_rea,#c_roa,#c_dva").addClass("c_weak");
+},);
+
+$("#c_jun").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_jun").addClass("c_selected");
+  $("#c_bas,#c_mer,#c_zen,#c_tor,#c_rei,#c_dva,#c_bri").addClass("c_hard");
+  $("#c_gen,#c_pha,#c_wid,#c_mcr,#c_rea,#c_han").addClass("c_weak");
+},);
+
+$("#c_mcr").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_mcr").addClass("c_selected");
+  $("#c_mer,#c_rea,#c_tra,#c_zen,#c_win,#c_mei").addClass("c_hard");
+  $("#c_gen,#c_pha,#c_wid,#c_bas,#c_zar,#c_rei").addClass("c_weak");
+},);
+
+$("#c_mei").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_mei").addClass("c_selected");
+  $("#c_gen,#c_dva,#c_luc,#c_rei,#c_mer,#c_win,#c_tra").addClass("c_hard");
+  $("#c_pha,#c_mcr,#c_wid,#c_bas,#c_rea").addClass("c_weak");
+},);
+
+$("#c_pha").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_pha").addClass("c_selected");
+  $("#c_jun,#c_rea,#c_mei,#c_zar,#c_rei,#c_tor,#c_bas,#c_sym,#c_bri").addClass("c_hard");
+  $("#c_sol,#c_wid").addClass("c_weak");
+},);
+
+$("#c_rea").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_rea").addClass("c_selected");
+  $("#c_win,#c_mer,#c_zen,#c_roa,#c_rei,#c_sym,#c_tor,#c_han").addClass("c_hard");
+  $("#c_mcr,#c_pha,#c_gen,#c_zar").addClass("c_weak");
+},);
+
+$("#c_sol").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_sol").addClass("c_selected");
+  $("#c_tor,#c_mer,#c_bas,#c_luc,#c_pha,#c_tra,#c_jun,#c_sym").addClass("c_hard");
+  $("#c_gen,#c_rei,#c_roa,#c_mei,#c_mcr").addClass("c_weak");
+},);
+
+$("#c_som").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_som").addClass("c_selected");
+  $("#c_bas,#c_luc,#c_wid,#c_rei,#c_zar,#c_bri").addClass("c_hard");
+  $("#c_sym,#c_mei,#c_win,#c_roa,#c_pha").addClass("c_weak");
+},);
+
+$("#c_sym").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_sym").addClass("c_selected");
+  $("#c_gen,#c_rei,#c_doo,#c_mer").addClass("c_hard");
+  $("#c_pha,#c_win,#c_roa,#c_jun,#c_mcr,#c_wid,#c_rea,#c_sol").addClass("c_weak");
+},);
+
+$("#c_tor").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_tor").addClass("c_selected");
+  $("#c_zen,#c_luc,#c_mer,#c_tra,#c_win").addClass("c_hard");
+  $("#c_pha,#c_han,#c_rea,#c_jun,#c_zar,#c_wid,#c_sol").addClass("c_weak");
+},);
+
+$("#c_tra").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_tra").addClass("c_selected");
+  $("#c_wid,#c_mer,#c_bas,#c_han,#c_zen").addClass("c_hard");
+  $("#c_mcr,#c_roa,#c_tor,#c_mei,#c_win,#c_pha").addClass("c_weak");
+},);
+
+$("#c_wid").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_wid").addClass("c_selected");
+  $("#c_zen,#c_bas,#c_mer,#c_tor,#c_pha,#c_han,#c_mcr,#c_jun,#c_bri").addClass("c_hard");
+  $("#c_gen,#c_dva,#c_rea,#c_win,#c_rei").addClass("c_weak");
+},);
+
+/*----------------------- Support -----------------------*/
+$("#c_ana").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_ana").addClass("c_selected");
+  $("#c_mer,#c_luc,#c_zen,#c_mcr,#c_sol").addClass("c_hard");
+  $("#c_gen,#c_rea,#c_dva,#c_win").addClass("c_weak");
+},);
+
+$("#c_bri").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_bri").addClass("c_selected");
+  $("#c_luc,#c_tra,#c_sym,#c_zen,#c_mer,#c_ana").addClass("c_hard");
+  $("#c_bas#c_win,#c_jun,#c_wid,#c_han,#c_pha,#c_doo").addClass("c_weak");
+},);
+
+$("#c_luc").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_luc").addClass("c_selected");
+  $("#c_mer,#c_zar,#c_zen,#c_rei").addClass("c_hard");
+  $("#c_mei,#c_pha,#c_mcr,#c_tra,#c_roa,#c_gen").addClass("c_weak");
+},);
+
+$("#c_mer").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_mer").addClass("c_selected");
+  $("#c_sym").addClass("c_hard");
+  $("#c_tra,#c_roa,#c_gen,#c_rea,#c_sol,#c_mcr,#c_mei").addClass("c_weak");
+},);
+
+$("#c_moi").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_moi").addClass("c_selected");
+  $("#c_mer,#c_zar,#c_mei,#c_sym,#c_luc,#c_zen,#c_ana").addClass("c_hard");
+  $("#c_roa,#c_bas,#c_dva,#c_win,#c_som,#c_mcr,#c_wid,#c_rea,#c_jun,#_tra").addClass("c_weak");
+},);
+
+$("#c_zen").click(function(){
+  $(".reset").children().removeClass("c_selected c_hard c_weak");
+  $("#c_zen").addClass("c_selected");
+  $("#c_mer,#c_luc,#c_sym").addClass("c_hard");
+  $("#c_wid,#c_rea,#c_tra,#c_gen,#c_mcr,#c_han,#c_sol,#c_win,#c_pha,#c_roa").addClass("c_weak");
+},);
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+  }
+</script>
