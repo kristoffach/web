@@ -26,6 +26,13 @@ body {
   min-width: 1000px;
 }
 
+#a_version {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
 .accordion {
   font-family: "Overwatch", sans-serif;
   background-color: #0000;
