@@ -10,9 +10,8 @@
   font-weight: 400;
 }
 
-p {
+p, a {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 0.9em;
 }
 
 body {
@@ -24,6 +23,15 @@ body {
   color: #fff;
   background-color: #000;
   min-width: 1000px;
+}
+
+#a_version {
+  position: absolute;
+  right: 10px;
+  font-family: "Overwatch", sans-serif;
+  font-size: 1.5em;
+  color: #404040;
+  text-decoration: none;
 }
 
 .accordion {
@@ -60,6 +68,7 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    border: 2px solid #fa9c1e;
 }
 
 #wrapper {
@@ -228,34 +237,50 @@ footer {
 }
 
 .comp_img {
+  height: 300px;
   width: 200px;
   float: left;
-}
-
-.comp_txt {
-  width: calc(100% - 260px);
-  padding: 30px;
-  float: right;
 }
 
 .comp_img img {
   width: 95px;
 }
 
-.odd .comp_img {
+.comp_txt {
+  width: calc(100% - 260px);
+  padding: 10px 30px;
   float: right;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 270px;
 }
 
-.odd .comp_txt {
-  float: left;
+.odd, .even {
+  min-height: 300px;
 }
 
 .even {
-
+  background-color: rgba(75, 75, 75, 0.4);
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
-.odd {
-  background-color: rgba(75, 75, 75, 0.4);
+.even .comp_img {
+  float: right;
+}
+
+.even .comp_txt {
+  float: left;
+}
+
+.panel_counter {
+  position: relative;
+  top: -30px;
+  font-family: "Overwatch", sans-serif;
+  height: 0;
+  font-size: 2.5em;
+  color: #fa9c1e;
+  margin-left: 45%;
 }
 
 /* The Modal (background) */
