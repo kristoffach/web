@@ -25,6 +25,27 @@ body {
   min-width: 1000px;
 }
 
+#returntotop {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  font-size: 2em;
+  font-family: "Overwatch", sans-serif;
+  background-color: #181b1d;
+  border: none;
+  border-bottom: 2px solid #fa9c1e;
+  color: #fa9c1e;
+  cursor: pointer;
+  padding: 15px;
+}
+
+#returntotop:hover {
+  background-color: #fb8f00;
+  color: black;
+}
+
 #a_version {
   position: absolute;
   right: 10px;
@@ -68,7 +89,7 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    border: 2px solid #fa9c1e;
+    border: 1px solid #fa9c1e;
 }
 
 #wrapper {
@@ -289,6 +310,31 @@ footer {
   color: #fa9c1e;
   margin-left: 45%;
 }
+
+#glossary {
+  width: 100%;
+}
+
+#glossary div p {
+  margin: 40px;
+}
+
+#glossary_jumplist {
+  text-align: center;
+}
+
+#glossary_jumplist a {
+  font-family: "Overwatch", sans-serif;
+  font-size: 4em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+}
+
+#glossary_jumplist a:hover {
+  color: red;
+}
+
 
 /* The Modal (background) */
 .modal {
