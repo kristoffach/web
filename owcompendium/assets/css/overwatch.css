@@ -235,6 +235,14 @@ footer {
   width: 100%;
 }
 
+.comp_info {
+  margin: 10px 30px;
+  padding: 10px 30px;
+  background-color: rgba(75, 75, 75, 0.4);
+  font-style: italic;
+  color: #fa9c1e;
+}
+
 .comp_img {
   height: 300px;
   width: 200px;
