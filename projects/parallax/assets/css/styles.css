@@ -45,6 +45,14 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.content {
+  overflow: hidden;
+  width: 95%;
+  min-width: 500px;
+}
+
+
+
 .parallax {
   height: 500px;
   /* fallback for older browsers */
@@ -125,11 +133,11 @@ p {
 }
 
 #group3 .parallax_layer_f {
-  background: rgba(170,170,170,1);
+  background: rgba(170,170,170,0.8);
 }
 
 #group3 .parallax_layer_n {
-  background: #0e1217;
+  background: #0e121780;
 }
 
 #group4 {
@@ -190,6 +198,7 @@ blockquote {
    font-family: Tahoma, sans-serif;
    font-size: 40px;
    width: 60%;
+   min-width: 500px;
    margin: 0 auto;
    text-shadow: 3px 3px 0 #000;
 }
