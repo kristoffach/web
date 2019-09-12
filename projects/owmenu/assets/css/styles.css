@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'ow_menu_big';
+  src:  url("fonts/bignoodletoo.woff") format("woff"),
+        url("fonts/bignoodletoo.ttf") format("truetype"),
+        url("fonts/bignoodletoo.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'ow_menu_small';
+  src:  url("fonts/koverwatch.woff") format("woff"),
+        url("fonts/koverwatch.ttf") format("truetype"),
+        url("fonts/koverwatch.woff2") format("woff2");
+}
+
+body {
+  background: url(../img/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.white a {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+
+#cwrapper {
+  position: absolute;
+  display: block;
+  width:100%;
+  height: 100vh;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#cmenu {
+  background-color: rgba(0, 255, 0, 0.3);
+  display: inline-block;
+  width: 500px;
+  height: calc(100% - 100px);
+  padding: 50px;
+}
+
+#content {
+  background-color: rgba(0, 0, 255, 0.3);
+  display: inline-block;
+}
+
+.cmenu_logo {
+ width: inherit;
+}
+
+.cmenu_logo img {
+  width: 100%;
+}
+
+.cmenu_big {
+  font-family: "ow_menu_big", Helvetica, sans-serif;
+  font-size: 5em;
+  color: #fff;
+}
+
+.cmenu_small {
+  font-family: "ow_menu_small", Helvetica, sans-serif;
+  font-size: 2em;
+  color: #fff;
+}
+
+.cmenu_big li:hover {
+  margin-left: 50px;
+  transition: margin 0.1s;
+}
+
+.cmenu_small li:hover {
+  margin-left: 10px;
+  font-size: 1.1em;
+}
